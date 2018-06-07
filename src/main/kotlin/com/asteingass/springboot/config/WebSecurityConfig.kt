@@ -1,5 +1,8 @@
-package com.asteingass.springboot
+package com.asteingass.springboot.config
 
+import com.asteingass.springboot.JWTAuthenticationFilter
+import com.asteingass.springboot.JWTAuthorizationFilter
+import com.asteingass.springboot.SIGN_UP_URL
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpMethod

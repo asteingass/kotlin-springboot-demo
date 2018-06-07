@@ -1,5 +1,6 @@
 package com.asteingass.springboot.controller
 
+import com.asteingass.springboot.exceptions.UserAlreadyExistsException
 import com.asteingass.springboot.model.ApplicationUser
 import com.asteingass.springboot.repository.ApplicationUserRepository
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
@@ -15,6 +16,9 @@ class SignUpController(val applicationUserRepository: ApplicationUserRepository,
     @PostMapping
     fun register(@RequestBody applicationUser: ApplicationUser) {
         applicationUser.password = bCryptPasswordEncoder.encode(applicationUser.password)
-        applicationUserRepository.save(applicationUser)
+        if (applicationUserRepository.findByUsername(applicationUser.username) != null)
+            throw UserAlreadyExistsException()
+        else
+            applicationUserRepository.save(applicationUser)
     }
 }
