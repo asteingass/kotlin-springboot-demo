@@ -1,6 +1,6 @@
 package com.asteingass.springboot.config
 
-val SIGN_UP_URL = "/sign-up"
+val SIGN_UP_URL = "/register"
 val SECRET = "sFRHEiD2ikYX2gN0r8jZFuDPrf8t8IKB"
 val TOKEN_PREFIX = "Bearer "
 val HEADER_STRING = "Authorization"

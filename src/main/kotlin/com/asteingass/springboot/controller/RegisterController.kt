@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/sign-up")
-@Api(description = "Register / Sign-Up", produces = "application/json", tags = ["sign-up"])
-class SignUpController(val applicationUserRepository: ApplicationUserRepository, val bCryptPasswordEncoder: BCryptPasswordEncoder) {
+@RequestMapping("/register")
+@Api(description = "Register", produces = "application/json", tags = ["register"])
+class RegisterController(val applicationUserRepository: ApplicationUserRepository, val bCryptPasswordEncoder: BCryptPasswordEncoder) {
 
     @PostMapping
-    fun register(@RequestBody applicationUser: ApplicationUser) {
+    fun addNewApplicationUser(@RequestBody applicationUser: ApplicationUser) {
         applicationUser.password = bCryptPasswordEncoder.encode(applicationUser.password)
         if (applicationUserRepository.findByUsername(applicationUser.username) != null)
             throw UserAlreadyExistsException()

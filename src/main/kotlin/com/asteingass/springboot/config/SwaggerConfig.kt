@@ -30,7 +30,7 @@ class SwaggerConfig {
     private fun apiInfo(): ApiInfo {
         return ApiInfo(
                 "Kotlin-Springboot-Demo-API",
-                "I created this API as a playground to learn about Kotlin, Spring Boot, JWT and automated Swagger generation",
+                "I created this API as a playground to learn about Kotlin, Spring Boot, JWT, Docker and automated Swagger generation",
                 "1.0",
                 "Terms of service",
                 Contact("Andreas Steingaß", "", "andreas.steingass@gmail.com"),
