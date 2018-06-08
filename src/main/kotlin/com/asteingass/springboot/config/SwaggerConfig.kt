@@ -33,7 +33,7 @@ class SwaggerConfig {
                 "I created this API as a playground to learn about Kotlin, Spring Boot, JWT and automated Swagger generation",
                 "1.0",
                 "Terms of service",
-                Contact("Andreas Steingaß", "", ""),
+                Contact("Andreas Steingaß", "", "andreas.steingass@gmail.com"),
                 "License of API", "API license URL", Collections.emptyList())
     }
 

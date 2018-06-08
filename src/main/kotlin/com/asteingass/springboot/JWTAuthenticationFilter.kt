@@ -1,5 +1,9 @@
 package com.asteingass.springboot
 
+import com.asteingass.springboot.config.EXPIRATION_TIME
+import com.asteingass.springboot.config.HEADER_STRING
+import com.asteingass.springboot.config.SECRET
+import com.asteingass.springboot.config.TOKEN_PREFIX
 import com.asteingass.springboot.model.ApplicationUser
 import com.fasterxml.jackson.databind.ObjectMapper
 import io.jsonwebtoken.Jwts

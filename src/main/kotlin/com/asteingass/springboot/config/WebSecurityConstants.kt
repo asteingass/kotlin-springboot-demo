@@ -1,4 +1,4 @@
-package com.asteingass.springboot
+package com.asteingass.springboot.config
 
 val SIGN_UP_URL = "/sign-up"
 val SECRET = "sFRHEiD2ikYX2gN0r8jZFuDPrf8t8IKB"

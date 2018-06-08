@@ -1,5 +1,8 @@
 package com.asteingass.springboot
 
+import com.asteingass.springboot.config.HEADER_STRING
+import com.asteingass.springboot.config.SECRET
+import com.asteingass.springboot.config.TOKEN_PREFIX
 import io.jsonwebtoken.Jwts
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken

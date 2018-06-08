@@ -2,7 +2,6 @@ package com.asteingass.springboot.config
 
 import com.asteingass.springboot.JWTAuthenticationFilter
 import com.asteingass.springboot.JWTAuthorizationFilter
-import com.asteingass.springboot.SIGN_UP_URL
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpMethod
@@ -28,7 +27,7 @@ open class WebSecurity(val userDetailsService: UserDetailsService) : WebSecurity
         http.csrf().disable().authorizeRequests()
                 .antMatchers(HttpMethod.POST, SIGN_UP_URL).permitAll()
                 .antMatchers("/h2-console/**").permitAll() // H2 console
-                .antMatchers("/v2/api-docs", "/configuration/ui", "/swagger-resources", "/configuration/security", "/swagger-ui.html", "/webjars/**").permitAll() // Swagger
+                .antMatchers("/", "/v2/api-docs", "/configuration/ui", "/swagger-resources", "/configuration/security", "/swagger-ui.html", "/webjars/**").permitAll() // Swagger
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(JWTAuthenticationFilter(authenticationManager()))
